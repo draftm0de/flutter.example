@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 
-class DemoPage extends StatelessWidget {
-  const DemoPage({super.key, required this.title, required this.children});
+class DraftModeDemoPage extends StatelessWidget {
+  const DraftModeDemoPage({super.key, required this.title, required this.children});
 
   final String title;
   final List<Widget> children;
