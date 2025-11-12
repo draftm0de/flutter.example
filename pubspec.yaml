@@ -1,0 +1,24 @@
+name: draftmode_demo
+description: Demo wrapper page for all DraftMode examples
+version: 0.1.0
+homepage: https://draftmode.io/dev/flutter/demo
+license: MIT
+
+environment:
+  sdk: '>=3.8.0 <4.0.0'
+  flutter: ">=3.10.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  assets:
+    - assets/images/
+
+repository: https://github.com/draftm0de/flutter.demo
+issue_tracker: https://github.com/draftm0de/flutter.demo/issues

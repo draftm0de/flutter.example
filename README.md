@@ -1,0 +1,34 @@
+# DraftMode Flutter Demo
+
+## Overview
+DraftMode Demo is a minimal Cupertino-styled shell that aggregates DraftMode example widgets in a single Flutter page. The goal is to keep the surface area intentionally small so new demos can mount inside `DemoPage` without additional scaffolding.
+
+## Project Structure
+- `lib/page.dart` – core Cupertino page with a navigation bar, hero header, and injected child widgets.
+- `assets/images/` – static art used by the header (logo.png). Update `pubspec.yaml` if you add more assets.
+- `test/` – widget and unit tests. Mirrors the structure under `lib/`.
+- `flutter.init.sh` – convenience script that fetches dependencies, runs `flutter analyze`, ensures `test/` exists, and executes `flutter test`.
+
+## Getting Started
+1. Install Flutter 3.10+ with Dart 3.8+ on your PATH.
+2. From the repo root run `./flutter.init.sh` to install dependencies, analyze, and execute tests in one step.
+3. Alternatively run commands manually:
+   - `flutter pub get`
+   - `flutter analyze`
+   - `flutter test`
+
+## Development Workflow
+- Add new demos as widgets and pass them into `DemoPage(children: [...])`.
+- Favor small composable widgets per file; keep names aligned with their primary widget (e.g., `example_card.dart`).
+- Use `dart format .` or your editor’s Flutter formatter before committing.
+- Helpful IDE task: `flutter run -d chrome` or your device of choice to inspect UI changes quickly.
+
+## Testing & QA
+- Write widget tests with `flutter_test` for visual/layout logic and plain `test` for pure Dart helpers.
+- Name files `*_test.dart` alongside their source counterparts.
+- Run `flutter test` (or `./flutter.init.sh`) before pushing; include screenshots/GIFs for visible UI updates in PRs.
+
+## Assets & Configuration
+- Declare new assets in `pubspec.yaml` under the `flutter.assets` section.
+- Use `AssetImage('assets/images/...')` paths relative to the repo root.
+- Keep binary assets optimized; prefer vector or appropriately sized PNGs/WebPs to reduce bundle size.
