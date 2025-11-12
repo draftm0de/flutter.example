@@ -1,7 +1,7 @@
-name: draftmode_demo
-description: Demo wrapper page for all DraftMode examples
+name: draftmode_example
+description: Example wrapper page for all DraftMode examples
 version: 0.1.0
-homepage: https://draftmode.io/dev/flutter/demo
+homepage: https://draftmode.io/dev/flutter/example
 license: MIT
 
 environment:
@@ -20,5 +20,5 @@ flutter:
   assets:
     - assets/images/
 
-repository: https://github.com/draftm0de/flutter.demo
-issue_tracker: https://github.com/draftm0de/flutter.demo/issues
+repository: https://github.com/draftm0de/flutter.example
+issue_tracker: https://github.com/draftm0de/flutter.example/issues
