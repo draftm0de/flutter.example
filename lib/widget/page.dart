@@ -41,7 +41,7 @@ class _HeaderCard extends StatelessWidget {
       ),
       child: Row(
         children: [
-          Image.asset('assets/images/logo.png', height: 80),
+          Image.asset('assets/images/logo.png', package: 'draftmode_example', height: 80),
           const SizedBox(width: 16),
           const Expanded(
             child: Column(
