@@ -21,5 +21,6 @@ DraftMode Example is a minimal Cupertino-styled shell that aggregates DraftMode 
 
 ## Assets & Configuration
 - Declare new assets in `pubspec.yaml` under the `flutter.assets` section.
-- Use `AssetImage('assets/images/...')` paths relative to the repo root.
+- When loading bundled art inside this package, include the package qualifier (e.g., `Image.asset('assets/images/logo.png', package: 'draftmode_example')`) so the asset still resolves when the widget ships in another app.
+- Consumers that need the raw asset directly can use `Image.asset('packages/draftmode_example/assets/images/logo.png')` without adding extra pubspec entries.
 - Keep binary assets optimized; prefer vector or appropriately sized PNGs/WebPs to reduce bundle size.

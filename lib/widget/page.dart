@@ -41,6 +41,7 @@ class _HeaderCard extends StatelessWidget {
       ),
       child: Row(
         children: [
+          // Include package name so the asset resolves when this widget ships as a dependency.
           Image.asset('assets/images/logo.png', package: 'draftmode_example', height: 80),
           const SizedBox(width: 16),
           const Expanded(

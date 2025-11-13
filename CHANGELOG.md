@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file. The format loosely follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and versions adhere to semantic versioning.
 
+## [Unreleased]
+### Fixed
+- Document asset usage expectations and ensure the header logo loads via the package bundle when embedded downstream.
+
 ## [0.1.0] - 2025-11-13
 ### Added
 - Initial Cupertino `DemoPage` scaffold with hero header and child injection slots.
