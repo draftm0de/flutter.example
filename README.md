@@ -1,10 +1,10 @@
 # DraftMode Flutter Example
 
 ## Overview
-DraftMode Example is a minimal Cupertino-styled shell that aggregates DraftMode example widgets in a single Flutter page. The goal is to keep the surface area intentionally small so new demos can mount inside `DemoPage` without additional scaffolding.
+DraftMode Example exposes `DraftModeExamplePageWidget`, a minimal Cupertino-styled shell that aggregates DraftMode demos inside a single page. The goal is to keep the surface area intentionally small so new demos can mount inside the widget without additional scaffolding, whether they live in this repo or are consumed via `package:draftmode/example.dart`.
 
 ## Project Structure
-- `lib/page.dart` – core Cupertino page with a navigation bar, hero header, and injected child widgets.
+- `lib/widget/page.dart` – core Cupertino page with a navigation bar, hero header, and injected child widgets.
 - `assets/images/` – static art used by the header (logo.png). Update `pubspec.yaml` if you add more assets.
 - `test/` – widget and unit tests. Mirrors the structure under `lib/`.
 
@@ -21,6 +21,14 @@ DraftMode Example is a minimal Cupertino-styled shell that aggregates DraftMode 
 
 ## Assets & Configuration
 - Declare new assets in `pubspec.yaml` under the `flutter.assets` section.
-- When loading bundled art inside this package, include the package qualifier (e.g., `Image.asset('assets/images/logo.png', package: 'draftmode_example')`) so the asset still resolves when the widget ships in another app.
-- Consumers that need the raw asset directly can use `Image.asset('packages/draftmode_example/assets/images/logo.png')` without adding extra pubspec entries.
+- Widgets exported from this package **must** include the package qualifier when loading art so Flutter knows to look in `draftmode_example` even when the widget ships in another app:
+
+```dart
+Image.asset(
+  'assets/images/logo.png',
+  package: 'draftmode_example',
+);
+```
+
+- Consumers that need the raw asset directly can use `AssetImage('packages/draftmode_example/assets/images/logo.png')` (or the equivalent `Image.asset`) without adding extra pubspec entries.
 - Keep binary assets optimized; prefer vector or appropriately sized PNGs/WebPs to reduce bundle size.

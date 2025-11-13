@@ -1,14 +1,29 @@
 # Flutter & Dart build artifacts
 .dart_tool/
 .packages
+.pub/
 .pub-cache/
+.buildlog/
 build/
+coverage/
 flutter_*.log
+.metadata
+pubspec.lock
 
 # Generated plugin registries
 .flutter-plugins
 .flutter-plugins-dependencies
 .melos_tool/
+
+# Platform-specific outputs (kept for parity across examples)
+android/app/debug
+android/app/profile
+android/app/release
+ios/.symlinks/
+ios/Pods/
+ios/Podfile.lock
+ios/Flutter/ephemeral/
+ios/Flutter/flutter_export_environment.sh
 
 # IDE & editor clutter
 .idea/
